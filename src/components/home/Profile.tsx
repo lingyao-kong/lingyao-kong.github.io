@@ -70,23 +70,6 @@ export default function Profile({ author, social, features, researchInterests }:
     };
 
     const socialLinks = [
-        ...(social.email ? [{
-            name: messages.profile.email,
-            href: `mailto:${social.email}`,
-            icon: EnvelopeIcon,
-            isEmail: true,
-        }] : []),
-        ...(social.location || social.location_details ? [{
-            name: messages.profile.location,
-            href: social.location_url || '#',
-            icon: MapPinIcon,
-            isLocation: true,
-        }] : []),
-        ...(social.google_scholar ? [{
-            name: 'Google Scholar',
-            href: social.google_scholar,
-            icon: AcademicCapIcon,
-        }] : []),
         ...(social.orcid ? [{
             name: 'ORCID',
             href: social.orcid,
@@ -135,6 +118,11 @@ export default function Profile({ author, social, features, researchInterests }:
                 <p className="text-neutral-600 mb-2">
                     {author.institution}
                 </p>
+                {social.email && (
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                        Email: {social.email}
+                    </p>
+                )}
             </div>
 
             {/* Contact Links */}
