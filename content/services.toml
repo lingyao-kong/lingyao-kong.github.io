@@ -1,0 +1,20 @@
+type = "card"
+title = "Services"
+description = "Professional memberships."
+
+[[items]]
+title = "IEEE Undergraduate Member"
+subtitle = "IEEE"
+content = ""
+
+[[items]]
+title = "Student Member"
+subtitle = "IEEE International Conference on Bioinformatics and Biomedicine (BIBM) 2026"
+date = "2026"
+content = ""
+
+[[items]]
+title = "Student Member"
+subtitle = "Medical Image Computing and Computer Assisted Intervention (MICCAI) 2025"
+date = "2025"
+content = ""

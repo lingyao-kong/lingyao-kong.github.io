@@ -1,0 +1,35 @@
+type = "about"
+title = "关于我"
+
+[profile]
+research_interests = [
+  "递归自我改进",
+  "大语言模型",
+  "脑机接口",
+  "情感计算",
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+
+title = "个人简介"
+[[sections]]
+id = "education"
+type = "markdown"
+source = "education.md"
+title = "教育经历"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 5
+
+[[sections]]
+id = "news"
+type = "list"
+title = "动态"
+source = "news.toml"

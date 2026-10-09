@@ -1,0 +1,1 @@
+I was born and raised in Henan, China. Currently, I am a incoming master student at **Wuhan University**, China. I'm currently focused on **RSI, LLM, BCI and Affective Computing.**

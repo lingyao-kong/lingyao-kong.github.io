@@ -1,0 +1,20 @@
+type = "card"
+title = "学术服务"
+description = "学术组织会员。"
+
+[[items]]
+title = "IEEE 本科生会员"
+subtitle = "IEEE"
+content = ""
+
+[[items]]
+title = "学生会员"
+subtitle = "IEEE 国际生物信息学与生物医学会议（BIBM）2026"
+date = "2026"
+content = ""
+
+[[items]]
+title = "学生会员"
+subtitle = "医学图像计算与计算机辅助干预会议（MICCAI）2025"
+date = "2025"
+content = ""

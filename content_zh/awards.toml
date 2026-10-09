@@ -1,0 +1,57 @@
+type = "card"
+title = "奖项"
+description = "我获得的荣誉与奖项。"
+
+[[items]]
+title = "省级大学生创新创业训练计划项目"
+subtitle = "暨南大学"
+date = "05/2026"
+content = ""
+
+[[items]]
+title = "学术新星奖学金"
+subtitle = "暨南大学伯明翰大学联合学院"
+date = "12/2025"
+content = ""
+
+[[items]]
+title = "中国国际大学生创新大赛国家级银奖"
+subtitle = "中国教育部"
+date = "10/2025"
+content = "担任第二负责人。"
+
+[[items]]
+title = "暨南大学优秀学生二等奖学金"
+subtitle = "暨南大学"
+date = "10/2025"
+content = ""
+
+[[items]]
+title = "省级大学生创新创业训练计划项目"
+subtitle = "暨南大学"
+date = "05/2025"
+content = ""
+
+[[items]]
+title = "美国大学生数学建模竞赛 Meritorious Winner（前 6%）"
+subtitle = "COMAP"
+date = "01/2025"
+content = ""
+
+[[items]]
+title = "亚太地区大学生数学建模竞赛二等奖（前 15%）"
+subtitle = "APMCM"
+date = "11/2024"
+content = ""
+
+[[items]]
+title = "暨南大学优秀学生干部奖学金"
+subtitle = "暨南大学"
+date = "11/2024"
+content = ""
+
+[[items]]
+title = "学院志愿服务队优秀部门成员"
+subtitle = "暨南大学"
+date = "09/2024"
+content = ""

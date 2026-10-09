@@ -1,0 +1,36 @@
+type = "about"
+title = "About"
+
+[profile]
+research_interests = [
+  "Recursive Self-Improvement",
+  "Large Language Model",
+  "Brain-Computer Interface",
+  "Affective Computing"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "Introduction"
+
+[[sections]]
+id = "education"
+type = "markdown"
+source = "education.md"
+title = "Education"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "Selected Publications"
+filter = "selected"
+limit = 5
+
+[[sections]]
+id = "news"
+type = "list"
+title = "News"
+source = "news.toml"
+

@@ -1,0 +1,57 @@
+type = "card"
+title = "Awards"
+description = "Honors and awards I have received."
+
+[[items]]
+title = "Provincial-Level Undergraduate Innovation and Entrepreneurship Training Program"
+subtitle = "Jinan University"
+date = "05/2026"
+content = ""
+
+[[items]]
+title = "Academic Rising Star Scholarship"
+subtitle = "Joint Institute of Jinan University and the University of Birmingham"
+date = "12/2025"
+content = ""
+
+[[items]]
+title = "National Silver Award, China International College Students' Innovation Competition"
+subtitle = "Ministry of Education of China"
+date = "10/2025"
+content = "Served as second team leader."
+
+[[items]]
+title = "Second-Class Outstanding Student Scholarship"
+subtitle = "Jinan University"
+date = "10/2025"
+content = ""
+
+[[items]]
+title = "Provincial-Level Undergraduate Innovation and Entrepreneurship Training Program"
+subtitle = "Jinan University"
+date = "05/2025"
+content = ""
+
+[[items]]
+title = "Meritorious Winner (6%), Mathematical Contest in Modeling"
+subtitle = "COMAP"
+date = "01/2025"
+content = ""
+
+[[items]]
+title = "Second Prize (15%), Asia and Pacific Mathematical Contest in Modeling"
+subtitle = "APMCM"
+date = "11/2024"
+content = ""
+
+[[items]]
+title = "Outstanding Student Leader Scholarship"
+subtitle = "Jinan University"
+date = "11/2024"
+content = ""
+
+[[items]]
+title = "Outstanding Department Member, College Volunteer Service Team"
+subtitle = "Jinan University"
+date = "09/2024"
+content = ""
