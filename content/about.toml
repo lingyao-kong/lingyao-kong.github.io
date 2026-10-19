@@ -3,8 +3,8 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Recursive Self-Improvement",
   "Large Language Model",
+  "Agent",
   "Brain-Computer Interface",
   "Affective Computing"
 ]
