@@ -131,6 +131,20 @@ export default function RootLayout({
   return (
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <script
+          id="microsoft-clarity"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 'lingyao-kong.github.io') {
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "z0ocjx7z2e");
+              }
+            `,
+          }}
+        />
         <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
         <link rel="dns-prefetch" href="https://jialeliu.com" />
         <link rel="preconnect" href="https://jialeliu.com" crossOrigin="" />
