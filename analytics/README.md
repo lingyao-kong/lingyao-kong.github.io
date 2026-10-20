@@ -4,6 +4,8 @@ Cloudflare Workers + D1; the homepage stays on GitHub Pages. `public/visitor.js`
 
 ## Owner use
 
+Dashboard: https://lingyao-visitor-stats.lingyao-visitor-analytics.workers.dev/
+
 Open the deployed Worker's URL and enter the administration key from the private local file on the owner's desktop. The key is stored as the `ADMIN_KEY` Worker secret; it is never embedded in the tracker, dashboard source or Git repository. Login lasts seven days and uses a Secure, HttpOnly, SameSite=Strict HMAC-signed cookie. Rotate the key with `wrangler secret put ADMIN_KEY`; existing sessions then become invalid.
 
 The dashboard defaults to **all history**, supports inclusive date ranges in Asia/Shanghai, lists individual pageviews and exports the selected range as UTF-8 CSV. CSV export follows cursor pagination until every matching row has been downloaded, rather than exporting only the visible page.
