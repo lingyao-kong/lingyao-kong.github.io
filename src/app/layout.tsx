@@ -134,7 +134,7 @@ export default function RootLayout({
         <script
           defer
           src="/visitor.js"
-          data-endpoint="https://lingyao-visitor-stats.lingyao-visitor-analytics.workers.dev/collect"
+          data-endpoint="https://visitor-stats.lingyao-kong.deno.net/collect"
         />
         <script
           id="microsoft-clarity"

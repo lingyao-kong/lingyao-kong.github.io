@@ -4,11 +4,13 @@ Cloudflare Workers + D1; the homepage stays on GitHub Pages. `public/visitor.js`
 
 ## Owner use
 
-Dashboard: https://lingyao-visitor-stats.lingyao-visitor-analytics.workers.dev/
+Dashboard: https://visitor-stats.lingyao-kong.deno.net/
+
+Direct Cloudflare entry: https://lingyao-visitor-stats.lingyao-visitor-analytics.workers.dev/
 
 Additional free Pages entry: https://lingyao-visitor-stats.pages.dev/ . It uses a service binding to the same Worker, so it shares the database and administration key. Browsers connect to `pages.dev`; this is not a redirect to `workers.dev`. Reachability still depends on the visitor's network and must be tested from an affected device before changing the homepage's collector URL.
 
-Additional Deno entry: https://visitor-stats.lingyao-kong.deno.net/ . It forwards only the dashboard's fixed routes to the existing Worker, preserving its D1 history, collector origin checks, signed sessions and rate limits. The `lingyao-kong` organization uses the free plan. Both Cloudflare default domains failed the owner's phone-network test; the Deno entry has passed desktop browser and API checks, but its phone-network test is pending. The homepage collector stays unchanged until that test succeeds.
+The Deno entry forwards only the dashboard's fixed routes to the existing Worker, preserving its D1 history, collector origin checks, signed sessions and rate limits. The `lingyao-kong` organization uses the free plan. After the initial failures, the owner confirmed that the Deno link opens normally on the phone. The homepage collector uses `https://visitor-stats.lingyao-kong.deno.net/collect`.
 
 The Deno entry does not need a database secret or administrator key in its deployment. Requests through it leave country blank because Cloudflare sees the relay server's location. Device, browser, source and visit time remain available. IP-based rate limits apply to the Deno egress address, so many simultaneous visitors may share a limit; visitor-ID throttles still apply separately. Platform quotas and network availability remain relevant.
 
