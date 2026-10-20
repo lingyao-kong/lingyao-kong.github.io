@@ -1,0 +1,6 @@
+{
+  "name": "lingyao-visitor-stats",
+  "compatibility_date": "2026-10-01",
+  "pages_build_output_dir": "../.wrangler/pages-output",
+  "services": [{ "binding": "STATS", "service": "lingyao-visitor-stats" }]
+}

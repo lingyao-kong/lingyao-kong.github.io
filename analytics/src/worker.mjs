@@ -57,7 +57,7 @@ export function normalizeVisit(input, headers = new Headers(), cf = {}, now = Da
   const ua = headers.get('User-Agent') || '';
   const browser = /Edg\//.test(ua) ? 'Edge' : /Firefox\//.test(ua) ? 'Firefox' : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : 'Other';
   const device = /iPad|Tablet/i.test(ua) ? 'Tablet' : /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : 'Desktop';
-  const country = /^[A-Z]{2}$/.test(cf.country || '') ? cf.country : '';
+  const country = headers.get('X-Stats-Relay') === 'deno' ? '' : /^[A-Z]{2}$/.test(cf.country || '') ? cf.country : '';
   return { id: input.id.toLowerCase(), visitor: input.visitor.toLowerCase(), path, source, created: now, duration: Math.max(0, Math.min(Number.isFinite(input.duration) ? Math.round(input.duration) : 0, 86400000)), browser, device, country };
 }
 

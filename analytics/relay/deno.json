@@ -1,0 +1,9 @@
+{
+  "lock": false,
+  "tasks": { "start": "deno run --allow-net main.mjs" },
+  "fmt": { "lineWidth": 100 },
+  "deploy": {
+    "org": "lingyao-kong",
+    "app": "visitor-stats"
+  }
+}

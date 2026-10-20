@@ -15,6 +15,13 @@ test('collection strips query strings and never accepts visitor supplied timesta
   assert.throws(() => normalizeVisit({ ...event, visitor: 'not-a-uuid' }));
 });
 
+test('relay traffic does not report the relay server country as the visitor country', () => {
+  const direct = normalizeVisit(event, new Headers(), { country: 'CN' });
+  assert.equal(direct.country, 'CN');
+  const relayed = normalizeVisit(event, new Headers({ 'X-Stats-Relay': 'deno' }), { country: 'US' });
+  assert.equal(relayed.country, '');
+});
+
 test('rejects cross-site collection and oversized payloads before database access', async () => {
   const badOrigin = await worker.fetch(new Request('https://stats.test/collect', { method: 'POST', headers: { Origin: 'https://evil.com' }, body: JSON.stringify(event) }), env);
   assert.equal(badOrigin.status, 403);
