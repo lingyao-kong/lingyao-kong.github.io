@@ -132,6 +132,11 @@ export default function RootLayout({
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
+          defer
+          src="/visitor.js"
+          data-endpoint="https://lingyao-visitor-stats.lingyao-visitor-analytics.workers.dev/collect"
+        />
+        <script
           id="microsoft-clarity"
           dangerouslySetInnerHTML={{
             __html: `

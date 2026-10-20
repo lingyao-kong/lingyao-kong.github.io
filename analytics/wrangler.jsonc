@@ -1,0 +1,24 @@
+{
+  "name": "lingyao-visitor-stats",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": { "SITE_ORIGIN": "https://lingyao-kong.github.io" },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "lingyao-visitor-history",
+    "database_id": "2f854bb5-d8ae-4d2d-927a-10a5f960544b",
+    "migrations_dir": "migrations"
+  }],
+  "ratelimits": [
+    { "name": "LOGIN_LIMIT", "namespace_id": "268901", "simple": { "limit": 10, "period": 60 } },
+    { "name": "COLLECT_LIMIT", "namespace_id": "268902", "simple": { "limit": 60, "period": 60 } },
+    { "name": "INGEST_LIMIT", "namespace_id": "268903", "simple": { "limit": 300, "period": 60 } }
+  ],
+  "observability": { "enabled": false }
+}

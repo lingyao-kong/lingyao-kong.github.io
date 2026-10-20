@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>主页访问统计 · Lingyao Kong</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <main>
+    <header><div><span class="eyebrow">LINGYAO KONG / PRIVATE ANALYTICS</span><h1>主页访问统计</h1><p>查看已采集的访问记录 · 时间均为北京时间</p></div><button id="logout" hidden>退出登录</button></header>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section id="login" class="login panel">
+      <h2>登录你的统计后台</h2><p>使用部署时生成的管理密钥。访客无法读取统计记录。</p>
+      <form id="login-form"><label for="key">管理密钥</label><input id="key" type="password" autocomplete="current-password" required maxlength="256"><button class="primary" type="submit">登录</button></form>
+    </section>
+    <div id="dashboard" hidden>
+      <section class="toolbar panel" aria-label="查询条件">
+        <label>查询范围<select id="period"><option value="all">全部历史</option><option value="7">最近 7 天</option><option value="30">最近 30 天</option><option value="365">最近一年</option><option value="custom">自定义日期</option></select></label>
+        <label>开始日期<input id="from" type="date"></label><label>结束日期<input id="to" type="date"></label>
+        <button id="refresh" class="primary">查询 / 刷新</button><button id="export">导出当前范围 CSV</button>
+      </section>
+      <div class="metrics"><section class="panel"><span>访客数</span><strong id="visitors">—</strong><small>按匿名浏览器编号去重</small></section><section class="panel"><span>浏览量</span><strong id="pageviews">—</strong><small>成功采集的页面访问</small></section><section class="panel"><span>平均活跃停留</span><strong id="duration">—</strong><small>页面在前台时累计</small></section></div>
+      <section class="panel"><div class="section-title"><h2>访问趋势</h2><span id="range-note"></span></div><div id="trend" class="trend"></div></section>
+      <div class="columns"><section class="panel"><h2>访问来源</h2><div id="sources"></div></section><section class="panel"><h2>浏览页面</h2><div id="pages"></div></section></div>
+      <section class="panel"><div class="section-title"><h2>访问记录</h2><span>按访问时间从新到旧</span></div><div class="table-scroll"><table><thead><tr><th>访问时间</th><th>匿名访客</th><th>页面</th><th>来源</th><th>地区</th><th>设备 / 浏览器</th><th>活跃停留</th></tr></thead><tbody id="visits"></tbody></table></div><div class="pager"><button id="previous">上一页</button><span id="page-number">第 1 页</span><button id="next">下一页</button></div></section>
+      <footer>记录不设置自动过期删除。广告拦截、网络故障、隐私设置可能导致漏记；访客编号不能代表真实姓名或跨设备的同一个人。数据库仍受免费容量限制，请定期导出备份。</footer>
+    </div>
+  </main>
+</body>
+</html>
